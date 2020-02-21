@@ -29,7 +29,6 @@ spec:
       containers:
       - name: server
         image: katochm/adservice:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 9555
         env:
@@ -37,6 +36,7 @@ spec:
           value: "9555"
         #- name: JAEGER_SERVICE_ADDR
         #  value: "jaeger-collector:14268"
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: 200m
