@@ -31,6 +31,7 @@ spec:
         image: katochm/adservice:latest
         ports:
         - containerPort: 9555
+      imagePullPolicy: Always
         env:
         - name: PORT
           value: "9555"
