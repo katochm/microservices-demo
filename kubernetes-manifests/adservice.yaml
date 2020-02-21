@@ -29,6 +29,7 @@ spec:
       containers:
       - name: server
         image: katochm/adservice:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 9555
         env:
@@ -53,7 +54,6 @@ spec:
           periodSeconds: 15
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:9555"]
-      imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
